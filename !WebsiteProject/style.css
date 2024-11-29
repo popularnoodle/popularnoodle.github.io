@@ -1,0 +1,346 @@
+/* ADD FOOTER ON MAIN PAGE FOR CREDITS */
+
+  /* ANIMATION IS KINDA COOL */
+@keyframes scale {
+  0%   {transform: scale(1);}
+  25%  {transform: scale(0.9);}
+  50%  {transform: scale(1);}
+  75%  {transform: scale(0.9);}
+  100% {transform: scale(1);}
+  }
+
+.logo {
+  animation-name: scale;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+/* .byImage {
+  margin: 21%;
+} */
+
+
+body {
+    margin: 0px;
+}
+
+html {
+  background-color: #0000FE;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+      'menu header header header header'
+      'menu main main main main'
+      'menu main main main main'
+      'menu image image image image'
+      'menu image image image image'
+      'menu footer footer footer footer';
+      
+    background-color: #e7e7e8;
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr;
+    /* gap: 10px;
+    background-color: purple;
+    padding: 10px; */
+    /* 3 above do border */
+
+}
+  
+  .wrapper > div {
+    /* background-color: white; */
+    text-align: center;
+    /* margin-right: -100px; Moved to .menu*/
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    line-height: 1.5;
+    font-family: Arial;
+  }
+
+  .menu {
+    font-size: 25px;
+    color: black;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    margin-right: -100px;
+  }
+
+  .increase {
+    font-size: 35px;
+    text-decoration: underline;
+    padding-bottom: 15px;
+    margin-top: -10px;
+    line-height: 1 !important;
+    padding-top: 8px;
+    margin-bottom: -5px;
+  }
+
+  .menu a {
+    color: #0071b2;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover{
+    color: #0000FE;
+    text-decoration: none;
+    cursor:url(images/cursor.cur), auto;
+
+  }
+
+  .current{
+    text-decoration: underline;
+    color: #0071b2;
+  }
+
+.item1 {
+     grid-area: header;
+     padding-left: 30%; padding-top: 0.5%;
+     background-color: #0000FE;
+     border-left: black solid 3px;
+    }
+
+.item2 {
+    grid-area: menu; 
+    padding-left: 1%;
+    background-color: #e7e7e8;
+    line-height: 2 !important;
+    position: fixed;
+  }
+
+.item3 {
+     grid-area: main;
+     padding-left: 5%; padding-right: 5%; padding-top: 2%; padding-bottom: 2%;
+     background-color: #0071b2;
+     border-left: black solid 3px;
+    }
+
+.item4 {
+     grid-area: image;
+     padding-left: 5%; padding-right: 1%;
+     background-color: #0071b2;
+     border-left: black solid 3px;
+    }
+
+.item5 {
+  grid-area: footer;
+  background-color: #0000FE;
+  margin: 0px;
+  padding: 0px;
+  border-left: black solid 3px;
+  border-top:  black solid 3px;
+}
+
+.FooterText {
+  margin-left: 5%;
+}
+
+.inlineImage {
+  display: inline;
+}
+
+/* Lets me change image size in media */
+.sizeUp {
+  width: 24% !important;
+  display: inline-block !important;
+  height: 42% !important;
+}
+
+.btn {
+  width: 30%;
+  height: 3%;
+  border-radius: 15px;
+  border: solid black;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e7e7e8;
+  display: inline-block;
+  text-align: center;
+  color: #0000FE !important;
+}
+
+.btn:hover{
+  box-shadow: 3px 4px 6px #000000;
+  transform: translateY(1px);
+  cursor:url(images/cursor.cur), auto;
+}
+
+.contrast {
+filter: contrast(150%);
+height: 100%;
+}
+
+
+.brightness {
+  filter: brightness(120%);
+  height: 100%;
+}
+
+
+.help {
+  float: right;
+  width: 20%;
+  padding-right: 10px;
+  padding-left: 18px;
+  padding-top: 12px;
+  scale: 1.2;
+
+}
+
+
+
+/* @MEDIA */
+
+/* menu can scroll with low height */
+@media screen and (max-height:640px) {	
+  .item2 { 
+    position: relative;
+    margin-left: 5%;
+    }
+
+}
+
+/* menu fix */
+@media screen and (max-width:1500px) {	
+  .wrapper { 
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 1fr ;
+    }
+
+    .item2 { 
+      position: relative;
+      margin-left: 4%;
+      }
+}
+
+/* menu fix */
+@media screen and (max-width:1200px) {	
+  .menu { 
+    grid-template-columns: 0.85fr 1fr 1fr 1fr 1fr;
+    font-size: 22px;
+    }
+
+  .item2 { 
+    position: relative;
+    margin-left: 3%;
+    }
+
+    .logo {
+      margin-left: -5%;
+    }
+
+    .btn {
+      width: 28%;
+    }
+
+}
+
+/* Layout change */
+@media screen and (max-width:1065px) {	
+  .wrapper {
+    grid-template-areas:
+    'header header header header header'
+    'menu menu menu menu menu'
+    'main main main main main'
+    'image image image image image'
+    'image image image image image'
+    'footer footer footer footer footer';
+  }
+
+  .logo{
+    animation-name: none ;
+    size: 1px;
+    margin: 0px ;
+    padding: 0px ;
+    padding-top: 1% ;
+    float: left;
+  }
+  
+  .increase {
+    font-size: 30px;
+    padding-top: 2%;
+  }
+
+  .current {
+    display: inline;
+  }
+
+  .menu {
+    margin: auto;
+    float: center;
+    text-align: center;
+  }
+
+  .item1 {
+    size: 100%;
+    margin: auto;
+    border: none;
+  }
+
+  .item3 {
+    border: none;
+  }
+
+  .item4 {
+    border: none;
+  }
+
+  .item5 {
+    border-left: none;
+  }
+
+  .menu a {
+    display: inline;
+    padding-left: 12px;
+    text-align: center;
+  }
+
+  .btn {
+    margin-right: 20%;
+    margin-left: 30%;
+    width: 30%;
+  }
+}
+
+/* logo fix */
+@media screen and (max-width:1000px) {	
+    .logo {
+      margin-left: -6%;
+      margin-right: -5%;
+    }
+}
+
+
+/* logo removed, images by 2 not 4, and colour change */
+@media screen and (max-width:595px) {	
+  .logo {
+    display: none;
+  }
+
+  .item3 {
+    background-color: #0000FE;
+    /* BACKGROUND CHANGE HERE */
+  }
+
+  .item4 {
+    background-color: #0000FE;
+  }
+
+  .item5 {
+    background-color: #0071b2;
+  }
+
+  .sizeUp {
+    width: 49% !important;
+    height: 22% !important;
+  }
+
+  html {
+    background-color: #0071b2;
+  }
+
+  
+  .help {
+    display: none;
+  }
+}
